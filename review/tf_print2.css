@@ -30,18 +30,62 @@ nav, body>header>h1, section#left, body footer{
 img#logo{
    -webkit-display: block;
    display: block;
+   -webkit-width: 100%;
    width: 100%
+}
+/* Typography Styles */
+article header{
+   -webkit-margin-bottom: 0.2in;
+   margin-bottom: 0.2in;
+}
+article h1{
+   -webkit-font-size: 24pt;
+   font-size: 24pt;
+   -webkit-line-height: 26pt;
+   line-height: 26pt;
+}
+aside{
+   background-color: rgb(211,211,211);
+   margin-top: 0.3in;
+}
+aside h1{
+   -webkit-font-size: 18pt;
+   font-size: 18pt;
+   -webkit-line-height: 20pt;
+   line-height: 20pt;
+}
+aside img{
+   -webkit-width: 0.8in;
+   width: 0.8in;
+}
+p{
+   -webkit-font-size: 12pt;
+   font-size: 12pt;
+   margin-bottom: 0.1in;
+   -webkit-margin-bottom:0.1in
+}
+
+/* Hypertext Styles */
+a{
+   color: black;
+   text-decoration: none;
+}
+a::after{
+   content: " ("attr(href)") ";
+   word-wrap: break-word;
+   text-decoration: bold;
 }
 
 
-/* Typography Styles */
-
-
-
-/* Hypertext Styles */
-
-
-
-
 /* Page Break Styles */
+aside{
+   page-break-after: always;
+}
+aside img{
+   -webkit-width: 0.8in;
+   width: 0.8in;
+}
+
+
+
 
