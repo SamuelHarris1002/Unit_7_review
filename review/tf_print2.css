@@ -18,15 +18,20 @@
 
 
 /* Hidden Objects */
-
-
+nav, body>header>h1, section#left, body footer{
+   display:none;
+} 
 
 /* Page Box Styles */
-
-
-
+@page{
+   size: 8.5in 11in 0.5in;
+}
 /* Header Styles */
-
+img#logo{
+   -webkit-display: block;
+   display: block;
+   width: 100%
+}
 
 
 /* Typography Styles */

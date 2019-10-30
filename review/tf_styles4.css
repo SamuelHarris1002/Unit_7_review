@@ -40,10 +40,10 @@ section#right{
 }
 
 section#tips{
-   display: -webkit-flex;
-   display: flex;
+   display:flex;
+   display: webkit-flex;
    -webkit-box-flow: row wrap;
-   flex-flow: row wrap;
+   flex: row wrap;
 }
 
 section#tips article{
@@ -59,8 +59,8 @@ section#tips aside{
 nav.horizontal ul{
    display: -webkit-flex;
    display: flex;
-   -webkit-flex: column row;
-   flex: column row; 
+   -webkit-flex: column wrap;
+   flex-flow: column wrap; 
 }
 
 
@@ -68,18 +68,47 @@ nav.horizontal ul{
 	Mobile Devices: 0 to 480px 
    ===============================
 */
-   @media only screen and (max width=480px){
+   @media only screen and (max-width:480px){
       nav.vertical ul{
-         -webkit-flex: column 
+         display: flex;
+         -webkit-flex: column wrap;
+         flex: column wrap;
+         height: 240px;
+      }
+      section#left{
+         -webkit-order: 99;
+         order: 99;
+      }
+      footer{
+         -webkit-order: 100;
+         order: 100;
+      }
+      a#navicon{
+         -webkit-display: none;
+         display: none;
+     }
+      nav.horizontal ul{
+         -webkit-display: none;
+         display: none;
+      }
+      a#navicon:hover+ul, n.horizontal ul:hover{
+         -webkit-display: block;
+         display:block;
       }
    }
-
-
 
 /* ============================================
 	Tablet and Desktop Devices: 481px or more 
    ============================================
 */
+@media only screen and (max-width:481px){
+   nav.horizontal ul{
+      -webkit-display: flex;
+      display: flex;
+      -webkit-height: 160px;
+      height: 160px;
+   }
 
+}
 
 
